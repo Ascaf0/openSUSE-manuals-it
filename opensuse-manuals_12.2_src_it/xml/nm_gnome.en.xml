@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//Novell//DTD NovDoc XML V1.0//EN" "novdocx.dtd" [
+ <!ENTITY % NOVDOC.DEACTIVATE.IDREF "INCLUDE"> 
+ <!ENTITY % entities SYSTEM "entity-decl.ent"> 
+ %entities;
+]>
+<!--
+*********************************
+Please see LICENSE.txt for this document's license.
+*********************************
+-->
+<sect1 xml:base="nm_gnome.xml" id="sec.nm.gnome">
+ <title>Using GNOME &nm;</title>
+ <indexterm>
+
+  <primary>&nm;</primary>
+
+  <secondary>GNOME &nm;</secondary>
+ </indexterm>
+
+ 
+ <para>
+  In GNOME, &nm; can be controlled with the GNOME &nm; icon. If the
+  network is set up for &nm; control, the icon is automatically shown in the
+  top bar.
+ </para>
+
+ <para>
+  If your top bar does not show any network connection icon, &gnome; &nm;
+  is probably not started. Press &altf2; and enter
+  <command>nm-applet</command> to start it manually.
+ </para>
+
+ <sect2 id="sec.nm.gome.applet.wired">
+  <title>Managing Wired Network Connections</title>
+  <para>
+   If your computer is connected to an existing network with a network
+   cable, use the &nm; icon to choose the network connection.
+  </para>
+  <procedure>
+   <step performance="required">
+    <para>
+     Click the icon to show a menu with available networks. The
+     currently used connection is listed on top of the menu, followed by
+     other active connections. </para>
+   </step>
+   <step performance="required">
+    <para>
+     Click <guimenu>Network Settings</guimenu> to get detailed information on 
+     all active interfaces.
+    </para>
+   </step>
+   <step performance="required">
+    <para>
+     To disconnect an active connection, click the 
+     <guimenu>OFF</guimenu> button next to <guimenu>Wired</guimenu>.
+    </para>
+   </step>
+   <step performance="required">
+    <para>
+     If you want to use a different configuration with the wired network,
+     open the network configuration dialog and
+     add another wired connection as described in
+     <xref linkend="pro.nm.configure"/>. Click the &nm; icon and
+     select the newly configured connection to activate it.
+    </para>
+   </step>
+   <step performance="required">
+    <para>
+     To switch off all network connections, both wired and wireless,
+     right-click the icon and uncheck <guimenu>Enable
+     Networking</guimenu>.
+    </para>
+   </step>
+  </procedure>
+ </sect2>
+
+ <sect2 id="sec.nm.gnome.applet.wireless">
+  <title>Managing Wireless Network Connections</title>
+  <para>
+   GNOME &nm; lists a number of available visible wireless networks.
+   To extend the list, click <guimenu>More
+   Networks</guimenu>. The signal strength of each network is also shown in
+   the menu. Encrypted wireless networks are marked with a lock icon.
+  </para>
+  <procedure>
+   <title>Connecting to a Wireless Network</title>
+   <step performance="required">
+    <para>
+     To connect to a wireless network, click the &nm; icon and choose
+     an entry from the list of available wireless networks.
+    </para>
+   </step>
+   <step performance="required">
+    <para>
+     If the network is encrypted, a dialog opens. It shows the type of
+     encryption the network uses (<guimenu>Wireless Security</guimenu>) and
+     holds a number of input fields according to the respective encryption
+     and authentication settings. Enter the appropriate credentials.
+    </para>
+   </step>
+   <step performance="required">
+    <para>To connect to a network that does not broadcast its service set
+     identifier (SSID or ESSID), and therefore cannot be detected automatically,
+     click the &nm; icon and choose <menuchoice><guimenu>Network Settings</guimenu>
+      <guimenu>Wireless</guimenu>
+      <guimenu>Other</guimenu>
+     </menuchoice>.
+    </para>
+   </step>
+   <step performance="required">
+    <para>
+     In the dialog that opens, enter the connection details and click
+     <guimenu>Connect</guimenu>.
+    </para>
+   </step>
+   <step performance="required">
+    <para>
+     To disable wireless networking, click the icon and click the
+     <guimenu>OFF</guimenu> button next to <guimenu>Wireless</guimenu>. This can 
+     be useful if you are on a  plane or in any other environment where wireless
+     networking is not allowed.
+    </para>
+   </step>
+  </procedure>
+  <para>
+   A wireless network that has been chosen explicitly will remain connected
+   as long as possible. If a network cable is plugged in during that time,
+   any connections that have been set to <guimenu>Connect
+   Automatically</guimenu> will be connected, while the wireless connection
+   remains up.
+  </para>
+ </sect2>
+
+ <sect2 id="sec.nm.gnome.applet.accesspoint">
+  <title>Configuring Your Wireless Card as an Access Point</title>
+  <para>If your wireless card supports access point mode, you can use &nm; for
+   configuration.
+  </para>
+  <note>
+   <title>Availability of Options</title>
+   <para>
+    Depending on your system set-up, you may not be allowed to configure
+    connections. In a secured environment, some options might be locked or
+    require &rootuser; permission. Ask your system administrator for
+    details.
+   </para>
+  </note>
+  <procedure>
+   <step performance="required">
+    <para>
+     Click the &nm; icon and select <guimenu>Network Settings</guimenu>
+     <guimenu>Wireless</guimenu>.
+    </para>
+   </step>
+   <step performance="required">
+    <para>Click <guimenu>Use as Hotspot</guimenu>, confirm the pop-up and enter 
+    the &rootuser; password to continue.
+    
+    </para>
+    <para>A <guimenu>Network Name</guimenu> (SSID) and a
+    <guimenu>Security Key</guimenu> are automatically generated 
+    and shown in the <guimenu>Network</guimenu> dialog. 
+    The network name will be based on the hostname of your computer. 
+    Other devices will need this information to connect to the hotspot that you
+    have created.</para>
+    <important>
+     <title>Unprotected Wireless Networks Are a Security Risk</title>
+     <para> To restrict access to your access point and to secure your connection, 
+      use encryption. Depending on the abilities of your network card, you can 
+      choose between various WEP and WPA&ndash;based encryptions. If you are not
+      sure which technology is best for you, read
+       <xref linkend="sec.wireless.wlan.func.auth"/>. </para>
+    </important>
+   </step>
+   <step performance="required">
+    <para>To change the SSID, encryption options (WEP, WPA, etc.) or the security 
+    key of the hotspot:</para>
+    <substeps performance="required">
+     <step performance="required">
+      <para>Click <guimenu>Options</guimenu> next to the 
+    <guimenu>Stop Hotspot</guimenu> button.</para>
+     </step>
+     <step performance="required">
+      <para>Enter the &rootuser; password to continue.</para>
+     </step>
+     <step performance="required">
+      <para>Change the SSID on the <guimenu>Wireless</guimenu> tab or the 
+      encryption details on the <guimenu>Wireless Security</guimenu> tab. </para>
+      
+      <note>
+       <title>WEP 40/128-bit Key (Hex or ASCII)</title>
+       <para>When using <literal>WEP 40/128-bit Key</literal> as encryption method, the
+         <guimenu>Key</guimenu> length is restricted to either <literal>5</literal>,
+         <literal>10</literal>, or <literal>13</literal> characters. Otherwise the
+         <guimenu>Save</guimenu> button is inactive.</para>
+      </note>
+     </step>
+     <step performance="required">
+      <para>Confirm your changes. After a short delay, the <guimenu>Network</guimenu> 
+      dialog will show your changes. </para>
+     </step>
+    </substeps>
+   </step>
+  <step performance="required">
+   <para>To stop the hotspot and disconnect any users, click 
+   <guimenu>Stop Hotspot</guimenu> and confirm your choice in the pop-up 
+   dialog.
+   </para>
+  </step>
+ </procedure>
+</sect2>
+</sect1>

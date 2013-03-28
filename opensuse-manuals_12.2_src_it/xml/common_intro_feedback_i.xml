@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//Novell//DTD NovDoc XML V1.0//EN" "novdocx.dtd" [
+ <!ENTITY % NOVDOC.DEACTIVATE.IDREF "INCLUDE"> 
+ <!ENTITY % entities SYSTEM "entity-decl.ent"> 
+ %entities;
+]>
+<!--
+*********************************
+Please see LICENSE.txt for this document's license.
+*********************************
+-->
+<sect1 xml:base="common_intro_feedback_i.xml">
+ <title>Feedback</title>
+
+ <para>
+  Sono disponibili vari canali di feedback:
+ </para>
+
+ <variablelist>
+  <varlistentry os="osuse">
+   <term>Bug e richieste di miglioramento</term>
+   <listitem>
+    <para>
+     Per segnalare bug inerenti al componente di un prodotto, o per inviare
+     richieste di miglioramento, si prega di utilizzare <ulink url="https://bugzilla.novell.com/"/>.
+     In caso di bug della documentazione, segnalare il bug per il
+     componente<guimenu>Documentation</guimenu> del rispettivo prodotto.
+    </para>
+    <para>
+     Se non si avesse familiarità con Bugzilla, potrebbero risultare utili
+     i seguenti articoli:
+    </para>
+    <itemizedlist mark="bullet" spacing="normal">
+     <listitem>
+      <para>
+       <ulink url="http://en.opensuse.org/openSUSE:Submitting_bug_reports"/>
+      </para>
+     </listitem>
+     <listitem>
+      <para>
+       <ulink url="http://en.opensuse.org/openSUSE:Bug_reporting_FAQ"/>
+      </para>
+     </listitem>
+    </itemizedlist>
+   </listitem>
+  </varlistentry>
+  
+  <varlistentry>
+   <term>Commenti degli utenti</term>
+   <listitem>
+    <para>
+     Siamo interessati ai vostri commenti e suggerimenti relativi a questo manuale
+     e all'altra documentazione fornita con questo prodotto. Utilizzare il servizio
+     User Comments in fondo a ogni pagina della documentazione online oppure
+     andare alla pagina <ulink url="http://www.suse.com/documentation/feedback.html"/>
+     e aggiungere là i propri commenti.
+     
+    </para>
+   </listitem>
+  </varlistentry>
+  <varlistentry>
+  <term>E-mail</term>
+  <listitem>
+   <para>Per il feedback sulla documentazione di questo prodotto, è inoltre
+    possibile inviare una e-mail a <literal>doc-team@suse.de</literal>. Assicurarsi
+    di aggiungere il titolo del manuale, la versione del prodotto e la data di
+    pubblicazione della documentazione. Per segnalare errori o suggerire migliorie, 
+    si prega di fornire una descrizione concisa del problema e di citare il numero
+    di sezione e la pagina (o il relativo URL) corrispondenti. 
+   </para>
+  </listitem>
+   </varlistentry>
+ </variablelist>
+</sect1>

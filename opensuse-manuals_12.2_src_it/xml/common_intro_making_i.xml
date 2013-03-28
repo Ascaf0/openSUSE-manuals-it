@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//Novell//DTD NovDoc XML V1.0//EN" "novdocx.dtd" [
+ <!ENTITY % NOVDOC.DEACTIVATE.IDREF "INCLUDE"> 
+ <!ENTITY % entities SYSTEM "entity-decl.ent"> 
+ %entities;
+]>
+<!--
+*********************************
+Please see LICENSE.txt for this document's license.
+*********************************
+-->
+<sect1 xml:base="common_intro_making_i.xml">
+ <title>Informazioni sulla realizzazione di questo manuale</title>
+
+ <para>
+  Questo libro è stato scritto in Novdoc, un elemento di DocBook (vedere
+  <ulink url="http://www.docbook.org"/>). I file sorgente in XML sono stati
+  convalidati da <command>xmllint</command>, elaborati da
+  <command>xsltproc</command>, e convertiti in XSL-FO utilizzando una versione
+  personalizzata dei fogli di stile di Norman Walsh. Il PDF finale è stato formattato
+  con XEP da RenderX. <phrase os="osuse"> Gli strumenti open source e
+  l'ambiente utilizzati per la creazione di questo manuale sono disponibili nel pacchetto
+  <systemitem class="resource">daps</systemitem> che viene fornito con
+  &productname;. La pagina principale del progetto è disponibile all'indirizzo
+  <ulink url="http://daps.sf.net/"/>.</phrase>
+ </para>
+</sect1>

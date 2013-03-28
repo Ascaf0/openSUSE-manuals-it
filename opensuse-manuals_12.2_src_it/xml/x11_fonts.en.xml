@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//Novell//DTD NovDoc XML V1.0//EN" "novdocx.dtd" [
+ <!ENTITY % NOVDOC.DEACTIVATE.IDREF "INCLUDE"> 
+ <!ENTITY % entities SYSTEM "entity-decl.ent"> 
+ %entities;
+]>
+<!--
+*********************************
+Please see LICENSE.txt for this document's license.
+*********************************
+-->
+<chapter xml:base="x11_fonts.xml" id="cha.fontconfig">
+ <title>Installing and Configuring Fonts for the Graphical User Interface</title><indexterm>
+ <primary>X</primary>
+ <secondary>TrueType fonts</secondary></indexterm><indexterm>
+ <primary>fonts</primary>
+ <secondary>TrueType</secondary></indexterm><indexterm>
+ <primary>X</primary>
+ <secondary>fonts</secondary></indexterm><indexterm>
+ <primary>X</primary>
+ <secondary>xft</secondary></indexterm><indexterm>
+ <primary>X</primary>
+ <secondary>character sets</secondary></indexterm>
+ <para>
+  The installation of additional fonts in &productnamereg; is very easy.
+  Simply copy the fonts to any directory located in the X11 font path.
+
+  To enable the use of the fonts, the installation directory should be
+  a subdirectory of the directories configured in
+  <filename>/etc/fonts/fonts.conf</filename>
+
+  or included into this file with
+  <filename>/etc/fonts/suse-font-dirs.conf</filename>.
+ </para>
+ <para>
+  The following is an excerpt from
+  <filename>/etc/fonts/fonts.conf</filename>. This file is the standard
+  configuration file that should be appropriate for most configurations. It
+  also defines the included directory
+  <filename>/etc/fonts/conf.d</filename>. In this directory, all files or
+  symbolic links starting with a two digit number are loaded by fontconfig.
+  For a more detailed explanation of this functionality, have a look at
+  <filename>/etc/fonts/conf.d/README</filename>.
+ </para>
+<screen>&lt;!-- Font directory list --&gt;
+&lt;dir&gt;/usr/share/fonts&lt;/dir&gt;
+&lt;dir&gt;/usr/X11R6/lib/X11/fonts&lt;/dir&gt; 
+&lt;dir&gt;/opt/kde3/share/fonts&lt;/dir&gt;
+&lt;dir&gt;/usr/local/share/fonts&lt;/dir&gt;
+&lt;dir&gt;~/.fonts&lt;/dir&gt;
+</screen>
+ <para>
+  <filename>/etc/fonts/suse-font-dirs.conf</filename> is automatically
+  generated to pull in fonts that ship with (mostly third party)
+  applications like OpenOffice.org, Java or Adobe Acrobat Reader. A typical
+  entry would look like the following:
+ </para>
+<screen>&lt;dir&gt;/usr/lib/Adobe/Reader9/Resource/Font&lt;/dir&gt;
+&lt;dir&gt;/usr/lib/Adobe/Reader9/Resource/Font/PFM&lt;/dir&gt;
+ </screen>
+ <sect1 id="sec.fontconfig.add">
+  <title>Adding Fonts</title>
+
+  <para>
+   To install additional fonts system wide, manually copy the font files to a
+   suitable directory (as &rootuser;),
+   such as <filename>/usr/share/fonts/truetype</filename>. Alternatively,
+   the task can be performed with the KDE font installer in the System
+   Settings. The result is the same.
+  </para>
+
+  <para>
+   Instead of copying the actual fonts, you can also create symbolic links.
+   For example, you may want to do this if you have licensed fonts on a
+   mounted Windows partition and want to use them. Subsequently, run
+   <command>SuSEconfig <option>&#x2d;&#x2d;module fonts</option></command>.
+  </para>
+
+  <para>
+   <command>SuSEconfig <option>--module fonts</option></command> executes
+   the script <filename>/usr/sbin/fonts-config</filename>, which handles the
+   font configuration. For more information on this script, refer to its
+   manual page (<command>man <option>fonts-config</option></command>).
+  </para><indexterm>
+
+  <primary>commands</primary>
+
+  <secondary>fonts-config</secondary></indexterm>
+
+  <para>
+   The procedure is the same for bitmap fonts, TrueType and OpenType fonts,
+   and Type&nbsp;1 (PostScript) fonts. All these font types can be installed
+   into any directory known to <literal>fonts-config</literal>.
+  </para>
+ </sect1>
+
+</chapter>

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//Novell//DTD NovDoc XML V1.0//EN" "novdocx.dtd" [
+ <!ENTITY % NOVDOC.DEACTIVATE.IDREF "INCLUDE"> 
+ <!ENTITY % entities SYSTEM "entity-decl.ent"> 
+ %entities;
+]>
+<!--
+*********************************
+Please see LICENSE.txt for this document's license.
+*********************************
+-->
+<?xml-stylesheet href="urn:x-suse:xslt:profiling:novdoc-profile.xsl"
+                 type="text/xml" 
+                 title="Profiling step"?>
+<chapter xml:base="art_opensuse_install_quick.xml" id="art.osuse.installquick">
+ <title>&instquick;</title>
+ <abstract>
+  <para>
+   Utilizzare le procedure seguenti per installare una nuova versione di &productnamereg;
+   &productnumber;. Questo documento fornisce una rapida panoramica su come
+   effettuare un'installazione predefinita di &productname;.
+  </para>
+ </abstract> 
+ <sect1 id="sec.osuse.installquick">
+  <title>Benvenuti in &productname;</title>
+
+  <para>
+   Per istruzioni più dettagliate sull'installazione e le strategie di distribuzione,
+   si veda la documentazione su &productname; all'indirizzo
+   <ulink url="http://www.suse.com/documentation/opensuse122/"/>.
+  </para>
+ </sect1>
+
+  <sect1 id="sec.osuse.installquick.sysreqs">
+   <title> Requisiti di sistema</title>
+   <itemizedlist mark="check" spacing="normal">
+    <listitem>
+     <para>
+      Processore Pentium* III 500 MHz o superiore (consigliati Pentium 4 2.4 GHz o superiore,
+      oppure qualsiasi processore della famiglia AMD64 o Intel* EM64T)
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      512 MB di RAM fisicamente installata (consigliato 1 GB)
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      3 GB di spazio disponibile su disco (consigliata una quantità maggiore)
+     </para>
+    </listitem>
+    <listitem>
+     <para>
+      risoluzione dello schermo di 800 x 600 punti (consigliata 1024 x 768 o superiore)
+     </para>
+    </listitem>
+   </itemizedlist>
+  </sect1>
+
+  <sect1 id="sec.osuse.installquick.install">
+   <title>Installazione di &productname;</title>
+   <para>
+    Utilizzare queste istruzioni sia nel caso in cui non esista ancora alcun sistema Linux installato
+    nel proprio computer, sia che si intenda sostituire un sistema Linux già presente.
+   </para>
+<?dbfo-need height="10em"?>
+
+   <procedure>
+    <step performance="required">
+     <para>
+      Inserire il DVD di &productname; nell'unità, quindi riavviare il computer
+      per avviare il programma di installazione.
+     </para>
+     <informalfigure>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="i_y2_boot.png" width="75%"/>
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="i_y2_boot.png" width="75%"/>
+       </imageobject>
+      </mediaobject>
+     </informalfigure>
+    </step>
+    <step performance="required">
+     <para>
+      Nella schermata di avvio selezionare <guimenu>Installation</guimenu> e premere
+      <keycap>Invio</keycap>. Questo farà sì che venga caricato il programma di installazione
+      di &productname; e venga caricata l'installazione in modalità normale.
+     </para>
+     <informalfigure>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="i_y2_welcome.png" width="75%"/>
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="i_y2_welcome.png" width="75%"/>
+       </imageobject>
+      </mediaobject>
+     </informalfigure>
+    </step>
+    <step performance="required">
+     <para>
+      Selezionare la lingua e il layout di tastiera da utilizzare durante
+      l'installazione e per il sistema installato.
+     </para>
+     <para>
+      Leggere il Contratto di licenza e confermare con <guimenu>Next</guimenu> (Avanti)
+      se si accettano le condizioni. In caso di mancata accettazione del contratto premere
+      <guimenu>Abort</guimenu> (Interrompi) per terminare l'installazione.
+     </para>
+     <informalfigure>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="i_y2_inst_mode.png" width="75%"/>
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="i_y2_inst_mode.png" width="75%"/>
+       </imageobject>
+      </mediaobject>
+     </informalfigure>
+    </step>
+    <step performance="required">
+     <para>
+      Selezionare <guimenu>Nuova installazione</guimenu> e premere
+      <guimenu>Avanti</guimenu> per proseguire.
+     </para>
+     <informalfigure>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="i_y2_timezone.png" width="75%"/>
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="i_y2_timezone.png" width="75%"/>
+       </imageobject>
+      </mediaobject>
+     </informalfigure>
+    </step>
+    <step performance="required">
+     <para>
+      Usare la cartina col mappamondo o gli elenchi dai menu a tendina per
+      la <guimenu>Regione</guimenu> e il <guimenu>Fuso orario</guimenu>, al fine
+      di selezionare l'ora e il fuso orario da utilizzare nel proprio sistema.
+      Quindi proseguire con <guimenu>Avanti</guimenu>.
+     </para>
+     <informalfigure>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="i_y2_sys_type.png" width="75%"/>
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="i_y2_sys_type.png" width="75%"/>
+       </imageobject>
+      </mediaobject>
+     </informalfigure>
+    </step>
+    <step performance="required">
+     <para>
+      Selezionare il sistema di ambiente desktop che si desidera utilizzare.
+      <guimenu>KDE</guimenu> e <guimenu>GNOME</guimenu>, sono potenti
+      ambienti desktop grafici simili a Window, selezioni alternative
+      sono disponibili una volta che si sia spuntata l'opzione <guimenu>Altro</guimenu>.
+      Proseguire poi con <guimenu>Avanti</guimenu>.
+     </para>
+     <informalfigure>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="i_y2_partitioning.png" width="75%"/>
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="i_y2_partitioning.png" width="75%"/>
+       </imageobject>
+      </mediaobject>
+     </informalfigure>
+    </step>
+    <step performance="required">
+     <para>
+      Impostare in questo passaggio la configurazione delle partizioni per
+      &productname;. Nella maggior parte dei casi viene proposto una schema
+      ragionevole, che si può accettare senza modifiche. Accettare la proposta
+      con <guimenu>Avanti</guimenu> e procedere alla installazione. Gli utenti esperti
+      hanno inoltre la possibilità di personalizzare lo schema proposto (<guimenu>Modifica impostazione partizioni...</guimenu>)
+      o assegnare un proprio schema delle partizioni (<guimenu>Crea configurazione delle partizioni...</guimenu>).
+     </para>
+     <informalfigure>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="i_y2_user.png" width="75%"/>
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="i_y2_user.png" width="75%"/>
+       </imageobject>
+      </mediaobject>
+     </informalfigure>
+    </step>
+    <step performance="required">
+     <para>
+      Digitare il nome e il cognome nel campo <guimenu>Nome utente
+      completo</guimenu>, il nome utente (login) nel campo
+      <guimenu>Nome utente</guimenu> field, e poi una parola
+      d'ordine nel campo <guimenu>Password</guimenu>.
+     </para>
+     <para>
+      Per motivi di sicurezza, la password deve avere una lunghezza di almeno otto
+      caratteri e deve contenere sia lettere maiuscole e minuscole che numeri.
+      Le parole d'ordine distinguono tra maiuscole e minuscole.
+      Per proseguire premere <guimenu>Avanti</guimenu>.
+     </para>
+     <para>
+      Per impostazione predefinita, la password immessa qui viene utilizzata anche
+      per l'amministratore di sistema, &rootuser;. Deselezionare <guimenu>Usa questa
+      password per l'amministratore di sistema</guimenu> se si preferisce
+      specificare una password diversa per &rootuser; nel passaggio successivo.
+     </para>
+     <para>
+      Se si abilita il login automatico, all’avvio del sistema viene visualizzato
+      direttamente il desktop senza necessità di autenticazione. Non abilitare
+      questa opzione se anche altri hanno accesso al computer e vi sono,
+      al contempo, memorizzati dati sensibili.
+     </para>
+     <informalfigure>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="i_y2_inst_root.png" width="75%"/>
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="i_y2_inst_root.png" width="75%"/>
+       </imageobject>
+      </mediaobject>
+     </informalfigure>
+    </step>
+    <step performance="required">
+     <para>
+      Fornire una parola d'ordine per l'account dell'amministratore di sistema
+      (l'utente &rootuser;). Questo passaggio non verrà mostrato nel caso in cui
+      si sia attivata l'opzione <guimenu>Usa questa password per l'amministratore
+      di sistema</guimenu> nella fase precedente.
+     </para>
+     <para>
+      Si raccomanda di non dimenticare mai la parola d'ordine di <systemitem>root</systemitem>.
+      Una volta immessa, questa parola d'ordine non può essere recuperata e può
+      essere reimpostata solo dall'intervento di un amministratore. Fare
+      clic su <guimenu>Avanti</guimenu> per proseguire.
+     </para>
+     <informalfigure>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="i_y2_inst_summary.png" width="75%"/>
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="i_y2_inst_summary.png" width="75%"/>
+       </imageobject>
+      </mediaobject>
+     </informalfigure>
+    </step>
+    <step performance="required">
+     <para>
+      Utilizzare la schermata Impostazioni dell'installazione per controllare le
+      proprie scelte e eventuali impostazioni proposto in modo automatico.
+      Se necessario, effettuare le dovute modifiche alle impostazioni.
+     </para>
+     <para>
+      Fare clic su <guimenu>Installa</guimenu> per proseguire. A seconda del
+      software selezionato per l'installazione, potrebbe essere necessario
+      accettare dei contratti di licenza aggiuntivi, facendo clic su <guimenu>Accetta</guimenu>.
+      Prima dell'effettivo avvio dell'installazione verrà visualizzata la seguente finestra di dialogo:
+     </para>
+     <informalfigure>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="i_y2_inst_confirm.png" width="75%"/>
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="i_y2_inst_confirm.png" width="75%"/>
+       </imageobject>
+      </mediaobject>
+     </informalfigure>
+    </step>
+    <step performance="required">
+     <para>
+      Fare clic su <guimenu>Installa</guimenu> per avviare l'installazione.
+     </para>
+     <informalfigure>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="i_y2_inst_perform.png" width="75%"/>
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="i_y2_inst_perform.png" width="75%"/>
+       </imageobject>
+      </mediaobject>
+     </informalfigure>
+    </step>
+    <step performance="required">
+     <para>
+      Il tempo necessario per il completamento dell'installazione è compreso
+      tra 15 e 30 minuti, e dipende dalle prestazioni del sistema e dal software
+      selezionato. Durante l'installazione è possibile visualizzare la presentazione
+      del prodotto, le note di rilascio con le informazioni dell'ultimo minuto,
+      o ancora il registro dettagliato dell'installazione.
+     </para>
+     <informalfigure>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="i_y2_inst_config.png" width="75%"/>
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="i_y2_inst_config.png" width="75%"/>
+       </imageobject>
+      </mediaobject>
+     </informalfigure>
+    </step>
+    <step performance="required">
+     <para>
+      Dopo aver completato l'installazione di tutti i pacchetti software selezionati
+      e la configurazione del sistema di base, l'installazione di &productname; avvia
+      direttamente il nuovo sistema Linux, per eseguire la configurazione automatica
+      del sistema. Questa procedura configura l'accesso a Internet e la connessione di rete,
+      oltre a configurare l'hardware installato. Il processo non richiede alcun intervento manuale.
+     </para>
+     <informalfigure>
+      <mediaobject>
+       <imageobject role="fo">
+        <imagedata fileref="i_displaymanager.png" width="75%"/>
+       </imageobject>
+       <imageobject role="html">
+        <imagedata fileref="i_displaymanager.png" width="75%"/>
+       </imageobject>
+      </mediaobject>
+     </informalfigure>
+    </step>
+    <step performance="required">
+     <para>
+      L'ambiente desktop verrà avviato senza necessità di dati di accesso,
+      se è stato impostato il login automatico. In caso contrario, verrà
+      visualizzata la schermata di login grafico. Fare clic sul proprio nome utente
+      e digitare la parola d'ordine nel campo <guimenu>Password</guimenu>. Premere <keycap>Invio</keycap> per accedere al sistema.
+     </para>
+    </step>
+   </procedure>
+ </sect1>
+</chapter>

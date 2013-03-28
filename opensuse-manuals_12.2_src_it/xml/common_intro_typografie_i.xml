@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//Novell//DTD NovDoc XML V1.0//EN" "novdocx.dtd" [
+ <!ENTITY % NOVDOC.DEACTIVATE.IDREF "INCLUDE"> 
+ <!ENTITY % entities SYSTEM "entity-decl.ent"> 
+ %entities;
+]>
+<!--
+*********************************
+Please see LICENSE.txt for this document's license.
+*********************************
+-->
+<sect1 xml:base="common_intro_typografie_i.xml">
+
+
+ <title>Convenzioni adottate nella documentazione</title>
+
+ <para>
+  Nel presente manuale vengono utilizzate le convenzioni tipografiche riportate di seguito:
+ </para>
+
+ <itemizedlist mark="bullet" spacing="normal">
+  <listitem>
+   <para>
+    <filename>/etc/passwd</filename>: nomi di file e directory
+   </para>
+  </listitem>
+  <listitem>
+   <para>
+    <replaceable>placeholder</replaceable>: sostituire
+    <replaceable>placeholder</replaceable> con il valore appropriato
+   </para>
+  </listitem>
+  <listitem>
+   <para>
+    <envar>PATH</envar>: PERCORSO della variabile d'ambiente
+   </para>
+  </listitem>
+  <listitem>
+   <para>
+    <command>ls</command>, <option>--help</option>: comandi, opzioni e
+    parametri
+   </para>
+  </listitem>
+  <listitem>
+   <para>
+    <systemitem class="username">user</systemitem>: utenti e gruppi
+   </para>
+  </listitem>
+  <listitem>
+   <para>
+    <keycap function="alt">Alt</keycap>, <keycombo>
+    <keycap function="alt">Alt</keycap> <keycap>F1</keycap> </keycombo>: un
+    tasto da premere o una combinazione di tasti. I tasti sono visualizzati in maiuscolo come su una
+    tastiera
+   </para>
+  </listitem>
+  <listitem>
+   <para>
+    <guimenu>File</guimenu>, <menuchoice> <guimenu>File</guimenu>
+    <guimenu>Salva come</guimenu> </menuchoice>: voci di menu, pulsanti
+   </para>
+  </listitem>
+  
+  <listitem>
+   <para>
+    <emphasis>Dancing Penguins</emphasis> (Capitolo
+    <emphasis>Penguins</emphasis>, &uarr;Un altro manuale): Questo è un
+    riferimento a un capitolo in un altro manuale.
+   </para>
+  </listitem>
+ </itemizedlist>
+</sect1>

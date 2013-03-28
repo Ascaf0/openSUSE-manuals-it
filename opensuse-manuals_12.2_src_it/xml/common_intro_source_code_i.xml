@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//Novell//DTD NovDoc XML V1.0//EN" "novdocx.dtd" [
+ <!ENTITY % NOVDOC.DEACTIVATE.IDREF "INCLUDE"> 
+ <!ENTITY % entities SYSTEM "entity-decl.ent"> 
+ %entities;
+]>
+<!--
+*********************************
+Please see LICENSE.txt for this document's license.
+*********************************
+-->
+<sect1 xml:base="common_intro_source_code_i.xml">
+ <title>Codice sorgente</title>
+ <para>
+  Il codice sorgente di &productname; è disponibile per il pubblico. Fare riferimento a <ulink url="http://en.opensuse.org/Source_code"/> per i collegamenti
+  alle pagine di scaricamento e ulteriori informazioni.
+ </para>
+</sect1>

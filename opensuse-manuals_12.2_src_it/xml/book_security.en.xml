@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//Novell//DTD NovDoc XML V1.0//EN" "novdocx.dtd" [
+ <!ENTITY % NOVDOC.DEACTIVATE.IDREF "INCLUDE"> 
+ <!ENTITY % entities SYSTEM "entity-decl.ent"> 
+ %entities;
+]>
+<!--
+*********************************
+Please see LICENSE.txt for this document's license.
+*********************************
+-->
+<?xml-stylesheet href="urn:x-suse:xslt:profiling:novdoc-profile.xsl"
+ type="text/xml" 
+ title="Profiling step"?>
+<?provo dirname="security/"?><book xml:base="book_security.xml" lang="en" id="book.security">
+ <bookinfo>
+  <title>&secguide;</title><productname>&productname;</productname>
+  <productnumber>&productnumber;</productnumber><date>
+<?dbtimestamp format="B d, Y"?></date>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" os="osuse" href="common_copyright_opensuse.xml" parse="xml"/>
+  
+ </bookinfo>
+ <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="security_intro.xml" parse="xml"/>
+ <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="security_preface.xml" parse="xml"/>
+ <part id="part.auth">
+  <title>Authentication</title>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="security_pam.xml" parse="xml"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="security_nis.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="security_ldap.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="security_ad_support.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="security_kerberos.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="security_fingerprint.xml" parse="xml"/>
+
+ </part>
+ <part id="part.local_security">
+  <title>Local Security</title>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="security_yast2_security.xml" parse="xml"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="security_acls.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="security_cryptofs.xml" parse="xml"/>
+
+  
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="security_aide.xml" parse="xml"/>
+ </part>
+ <part id="part.network_security">
+  <title>Network Security</title>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="security_ssh.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="security_firewall.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="security_vpnserver.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="security_yast2_ca.xml" parse="xml"/>
+ </part>
+ <part id="part.apparmor">
+  <title>Confining Privileges with &aa;</title>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="apparmor_intro.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="apparmor_start.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="apparmor_whatimmunize.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="apparmor_profiles.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="apparmor_repositories.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="apparmor_profiles_yast.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="apparmor_profiles_man.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="apparmor_changehat.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="apparmor_pam.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="apparmor_managing.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="apparmor_support.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="apparmor_glossary.xml" parse="xml"/>
+ </part>
+
+
+
+
+
+ <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" os="osuse" href="common_legal.xml" parse="xml"/>
+</book>

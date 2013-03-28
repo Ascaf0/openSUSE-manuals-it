@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//Novell//DTD NovDoc XML V1.0//EN" "novdocx.dtd" [
+ <!ENTITY % NOVDOC.DEACTIVATE.IDREF "INCLUDE"> 
+ <!ENTITY % entities SYSTEM "entity-decl.ent"> 
+ %entities;
+]>
+<!--
+*********************************
+Please see LICENSE.txt for this document's license.
+*********************************
+-->
+<sect1 xml:base="common_intro_acknowl_i.xml">
+ <title>Ringraziamenti</title>
+
+ <para>
+  Gli sviluppatori di Linux collaborano a livello mondiale con grande impegno
+  volontario per promuovere lo sviluppo di questo prodotto. A loro vanno i nostri
+  sentiti ringraziamenti. Senza la loro dedizione questa distribuzione non sarebbe possibile.
+  Ringraziamo inoltre Frank Zappa and Pawar. Un grazie speciale, naturalmente, a Linus
+  Torvalds.
+ </para>
+
+ <para>
+  Buona lettura e.. Have a lot of fun!
+ </para>
+
+ <para>
+  Il team di &suse;
+ </para>
+</sect1>

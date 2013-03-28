@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//Novell//DTD NovDoc XML V1.0//EN" "novdocx.dtd" [
+ <!ENTITY % NOVDOC.DEACTIVATE.IDREF "INCLUDE"> 
+ <!ENTITY % entities SYSTEM "entity-decl.ent"> 
+ %entities;
+]>
+<!--
+*********************************
+Please see LICENSE.txt for this document's license.
+*********************************
+-->
+<?xml-stylesheet href="urn:x-suse:xslt:profiling:novdoc-profile.xsl"
+ type="text/xml"
+ title="Profiling step"?>
+<?provo dirname="tuning/"?><book xml:base="book_tuning.xml" lang="en" id="book.tuning">
+ <bookinfo>
+  <title>&tuning;</title><productname>&productname;</productname>
+  <productnumber>&productnumber;</productnumber><date>
+<?dbtimestamp format="B d, Y"?></date>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" os="osuse" href="common_copyright_opensuse.xml" parse="xml"/>
+  
+ </bookinfo>
+
+ <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tuning_intro.xml" parse="xml"/>
+
+
+
+ <part id="part.tuning.basics">
+  <title>Basics</title>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tuning_how.xml" parse="xml"/>
+ </part>
+
+
+
+ <part id="part.tuning.monitoring">
+  <title>System Monitoring</title>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="utilities.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tuning_nagios.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tuning_logfiles.xml" parse="xml"/>
+ </part>
+
+
+
+ <part id="part.tuning.kerneltrace">
+  <title>Kernel Monitoring</title>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tuning_systemtap.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tuning_kprobes.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tuning_perfmon.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tuning_oprofile.xml" parse="xml"/>
+ </part>
+
+
+
+ <part id="part.tuning.resources">
+  <title>Resource Management</title>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tuning_systemresources.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tuning_cgroups.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tuning_power.xml" parse="xml"/>
+ </part>
+
+
+
+ <part id="part.tuning.kernel">
+  <title>Kernel Tuning</title>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tuning_multikernel.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tuning_storagescheduler.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tuning_taskscheduler.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tuning_memory.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tuning_network.xml" parse="xml"/>
+ </part>
+
+
+
+ <part id="part.tuning.dumps">
+  <title>Handling System Dumps</title>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tuning_tracing.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tuning_kexec.xml" parse="xml"/>
+ </part>
+
+
+
+ <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="common_legal.xml" parse="xml"/>
+</book>

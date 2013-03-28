@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//Novell//DTD NovDoc XML V1.0//EN" "novdocx.dtd" [
+ <!ENTITY % NOVDOC.DEACTIVATE.IDREF "INCLUDE"> 
+ <!ENTITY % entities SYSTEM "entity-decl.ent"> 
+ %entities;
+]>
+<!--
+*********************************
+Please see LICENSE.txt for this document's license.
+*********************************
+-->
+<?xml-stylesheet href="urn:x-suse:xslt:profiling:novdoc-profile.xsl"
+ type="text/xml" 
+ title="Profiling step"?>
+<?provo dirname="startup/"?><book xml:base="book_opensuse_startup.xml" lang="it" id="book.opensuse.startup" role="print">
+ <bookinfo>
+  <title>&startup;</title><productname>&productname;</productname>
+  <productnumber>&productnumber;</productnumber><date>
+<?dbtimestamp format="B d, Y"?></date>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="common_copyright_opensuse.xml" parse="xml"/>
+ </bookinfo>
+ <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="opensuse_startup_intro.xml" parse="xml"/>
+
+
+
+ <part id="part.basics">
+  <title>Installazione e nozioni di base</title>
+ <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="art_opensuse_install_quick.xml" parse="xml"/>
+ <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="art_kde_quick.xml" parse="xml"/>
+ <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="art_gnome_quick.xml" parse="xml"/>
+ <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="art_libreoffice_quick.xml" parse="xml"/>
+  </part>
+
+
+
+ <part id="part.reference.software">
+  <title>Gestione e aggiornamento del software</title>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="yast2_sw.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="yast2_you.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="inst_pkg_internet.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="yast2_sw_addon.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="sw_managing_commandline.xml" parse="xml"/>
+ </part>
+
+
+
+ <part id="part.reference.administration">
+  <title>Amministrazione</title>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="yast2_userman.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="yast2_lang.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="yast2_ncurses.xml" parse="xml"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="yast2_hw.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="printing.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="x11_fonts.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="opensuse_update.xml" parse="xml"/>
+ </part>
+
+
+
+ <part id="part.bash">
+  <title>La shell Bash</title>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="newbie_bash.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="adm_shell.xml" parse="xml"/>
+ </part>
+
+
+
+ <appendix>
+  <title>Aiuto e risoluzione dei problemi</title>
+  <para/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="help_admin.xml" parse="xml"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="troubleshooting.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="common_copyright_quick.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" os="osuse" href="common_gfdl1.2_i.xml" parse="xml"/>
+ </appendix>
+
+
+
+
+
+</book>

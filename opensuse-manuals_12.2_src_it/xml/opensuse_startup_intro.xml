@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE preface PUBLIC "-//Novell//DTD NovDoc XML V1.0//EN" "novdocx.dtd" [
+ <!ENTITY % NOVDOC.DEACTIVATE.IDREF "INCLUDE"> 
+ <!ENTITY % entities SYSTEM "entity-decl.ent"> 
+ %entities;
+]>
+<!--
+*********************************
+Please see LICENSE.txt for this document's license.
+*********************************
+-->
+<preface xml:base="opensuse_startup_intro.xml" id="preface.startup">
+ <title>Informazioni su questa guida</title>
+ <para>
+  Questa guida consente di acquisire familiarità con &productnamereg;. Sia nel caso di utenti
+  inesperti che di amministratori avanzati, è utile verificare le diverse parti di questo
+  manuale per apprendere come installare e usare il sistema, in modo proficuo e divertente.
+ </para>
+ <variablelist>
+  <varlistentry>
+   <term>Installazione e nozioni di base</term>
+   <listitem>
+    <para>
+     Guida attraverso il processo di installazione e la configurazione di base
+     del sistema. Introduce &yast;, lo strumento centrale per l'installazione
+     e la configurazione del sistema. Istruisce su come impostare o modificare
+     i componenti chiave del sistema e su come connettersi a Internet.
+    </para>
+   </listitem>
+  </varlistentry>
+  <varlistentry>
+   <term>Nozioni di base</term>
+   <listitem>
+    <para>
+     Questa parte si rivolge principalmente agli utenti che passano a Linux da
+     altri sistemi operativi. Introduce i concetti di base di Linux, quali il
+     concetto di utente, la struttura del file system e i permessi di accesso per
+     file e directory. Viene inoltre fornita un'introduzione alla shell, sebbene
+     capiti ormai assai di rado di dover ricorrere alla riga di comando per interagire
+     col sistema.
+    </para>
+   </listitem>
+  </varlistentry>
+  <varlistentry>
+   <term>Aiuto e risoluzione dei problemi</term>
+   <listitem>
+    <para>
+     Fornisce una panoramica su dove trovare aiuto e la documentazione aggiuntiva
+     in caso siano necessarie ulteriori informazioni o si desideri usare il sistema
+     per eseguire compiti specifici. È inoltre una raccolta dei problemi e degli
+     inconvenienti più frequenti e informazioni sulla loro risoluzione, in maniera
+     autonoma.
+    </para>
+   </listitem>
+  </varlistentry>
+ </variablelist>
+ <para>
+  Questo manuale documenta la milestone 7 di &productname; &productnumber;.
+ </para>
+ <para>
+  In questo manuale molti capitoli contengono collegamenti ad ulteriori fonti di
+  documentazione. Quest'ultima annovera sia documentazione che è disponibile nel
+  sistema, sia documentazione disponibile in Internet.
+ </para>
+ <para>
+  Per una panoramica della documentazione disponibile per il prodotto, assieme a
+  quella aggiornata più di recente, fare riferimento a
+  <ulink url="http://www.suse.com/documentation/opensuse122"/> o alla
+  sezione seguente.
+ </para>
+ <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="common_intro_available_doc_i.xml" parse="xml"/>
+ <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="common_intro_feedback_i.xml" parse="xml"/>
+ <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="common_intro_typografie_i.xml" parse="xml"/>
+ <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" os="osuse" href="common_intro_making_i.xml" parse="xml"/>
+ <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" os="osuse" href="common_intro_source_code_i.xml" parse="xml"/>
+ <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" os="osuse" href="common_intro_acknowl_i.xml" parse="xml"/>
+</preface>

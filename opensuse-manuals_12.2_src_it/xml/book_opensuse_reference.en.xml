@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//Novell//DTD NovDoc XML V1.0//EN" "novdocx.dtd" [
+ <!ENTITY % NOVDOC.DEACTIVATE.IDREF "INCLUDE"> 
+ <!ENTITY % entities SYSTEM "entity-decl.ent"> 
+ %entities;
+]>
+<!--
+*********************************
+Please see LICENSE.txt for this document's license.
+*********************************
+-->
+<?xml-stylesheet href="urn:x-suse:xslt:profiling:novdoc-profile.xsl"
+ type="text/xml" 
+ title="Profiling step"?>
+<?provo dirname="reference/"?><book xml:base="book_opensuse_reference.xml" lang="en" id="book.opensuse.reference" role="online">
+ <bookinfo>
+  <title>&reference;</title><productname>&productname;</productname>
+  <productnumber>&productnumber;</productnumber><date>
+<?dbtimestamp format="B d, Y"?></date>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="common_copyright_opensuse.xml" parse="xml"/>
+ </bookinfo>
+ <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="opensuse_reference_intro.xml" parse="xml"/>
+
+
+
+ <part id="part.reference.install">
+  <title>Installation and Deployment</title>
+
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="inst_yast2.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="deployment_remote.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="advanced_disksetup.xml" parse="xml"/>
+ </part>
+
+
+
+
+ <part id="part.reference.adv_admin">
+  <title>Advanced Administration</title>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="snapper.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="vnc.xml" parse="xml"/>
+ </part>
+
+
+
+
+ <part id="part.reference.system">
+  <title>System</title>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="64bit_issues.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="bootconcept.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="systemd.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="grub.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="grub2.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="suse_linux.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="udev.xml" parse="xml"/>
+
+
+ </part>
+
+
+
+ <part id="part.reference.services">
+  <title>Services</title>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="net_general.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="net_slp.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="net_dns.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="net_dhcp.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="net_xntp.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="net_nfs.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="net_samba.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="apache2.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="yast2_ftp.xml" parse="xml"/>
+ </part>
+
+
+
+ <part id="part.reference.mobility">
+  <title>Mobility</title>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mobile.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="pcmcia_apm.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="wlan.xml" parse="xml"/>
+
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="nm.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tablet.xml" parse="xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="filetransfer.xml" parse="xml"/>
+ </part>
+
+
+
+ <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="network_scheme.xml" parse="xml"/>
+ <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="common_legal.xml" parse="xml"/>
+</book>

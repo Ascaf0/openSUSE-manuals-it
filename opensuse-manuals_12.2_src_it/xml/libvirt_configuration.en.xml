@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//Novell//DTD NovDoc XML V1.0//EN" "novdocx.dtd" [
+ <!ENTITY % NOVDOC.DEACTIVATE.IDREF "INCLUDE"> 
+ <!ENTITY % entities SYSTEM "entity-decl.ent"> 
+ %entities;
+]>
+<!--
+*********************************
+Please see LICENSE.txt for this document's license.
+*********************************
+-->
+<chapter xml:base="libvirt_configuration.xml" id="cha.libvirt.config">
+ <title>Configuring Virtual Machines</title>
+ <para/>
+
+
+ <abstract>
+  <para>
+   &vmm;'s <guimenu>Details</guimenu> view offers in-depth information about
+   the &vmguest;'s complete configuration and hardware equipment. Using this
+   view, you can also change the guest configuration or add and modify
+   virtual hardware. To access this view, open the guests console in &vmm;
+   and either choose <menuchoice> <guimenu>View</guimenu>
+   <guimenu>Details</guimenu></menuchoice> from the menu, or click on the
+   blue information icon in the toolbar.
+  </para>
+ </abstract>
+ <figure>
+  <title><guimenu>Details</guimenu> View of a &vmguest;</title>
+  <mediaobject>
+   <imageobject role="fo">
+    <imagedata fileref="libvirt_vmm_details.png" width="75%" format="PNG"/>
+   </imageobject>
+   <imageobject role="html">
+    <imagedata fileref="libvirt_vmm_details.png" width="75%" format="PNG"/>
+   </imageobject>
+  </mediaobject>
+ </figure>
+ <sect1 id="sec.libvirt.config.tablet">
+  <title>Enabling Seamless and Synchronized Cursor Movement</title>
+
+  <para>
+   When you click within a &vmguest;'s console with the mouse, the cursor is
+   captured by the console window and cannot be used outside the console
+   unless it is explicitly released (by pressing <keycombo>
+   <keycap function="alt"/> <keycap function="control"/> </keycombo> ). To
+   prevent the console from grabbing the key and to enable seamless cursor
+   movement between host and guest instead, add a tablet to the &vmguest;.
+  </para>
+
+  <para>
+   Adding a tablet has the additional advantage of synchronizing the cursor
+   movement between &vmhost; and &vmguest; when using a graphical
+   environment on the guest. With no tablet configured on the guest, you
+   will often see two cursor symbols with one dragging behind the other.
+  </para>
+
+  <procedure>
+   <step performance="required">
+    <para>
+     Double-click a &vmguest; entry in the &vmm; to open its console and
+     switch to the <guimenu>Details</guimenu> view with <menuchoice>
+     <guimenu>View</guimenu> <guimenu>Details</guimenu> </menuchoice>.
+    </para>
+   </step>
+   <step performance="required">
+    <para>
+     Click <guimenu>Add Hardware</guimenu> and choose
+     <guimenu>Input</guimenu> and then <guimenu>EvTouch USB Graphics
+     Tablet</guimenu> in the pop-up window. Proceed with
+     <guimenu>Finish</guimenu>.
+    </para>
+   </step>
+   <step performance="required">
+    <para>
+     In case you tried to add the tablet while the guest was still running,
+     you will be asked whether to enable the tablet after the next reboot.
+     Confirm with <guimenu>Yes</guimenu>.
+    </para>
+   </step>
+   <step performance="required">
+    <para>
+     Once you (re)start the &vmguest; the tablet is available in the
+     &vmguest;.
+    </para>
+   </step>
+  </procedure>
+ </sect1>
+ <sect1 id="sec.libvirt.config.cdrom">
+  <title>Adding a CD/DVD-ROM Device with &vmm;</title>
+
+  <para>
+   &kvm; supports CD or DVD-ROMs in &vmguest; either by directly accessing a
+   physical drive on the &vmhost; or by accessing ISO images. To create an
+   ISO image from an existing CD or DVD, use <command>dd</command>:
+  </para>
+
+  <screen>dd if=/dev/<replaceable>cd_dvd_device</replaceable> of=my_distro.iso bs=2048</screen>
+
+  <para>
+   To add a CD/DVD-ROM device to your &vmguest; proceed as follows:
+  </para>
+
+  <procedure>
+   <step performance="required">
+    <para>
+     Double-click a &vmguest; entry in the &vmm; to open its console and
+     switch to the <guimenu>Details</guimenu> view with <menuchoice>
+     <guimenu>View</guimenu> <guimenu>Details</guimenu> </menuchoice>.
+    </para>
+   </step>
+   <step performance="required">
+    <para>
+     Click <guimenu>Add Hardware</guimenu> and choose
+     <guimenu>Storage</guimenu> in the pop-up window. Proceed with
+     <guimenu>Forward</guimenu>.
+    </para>
+   </step>
+   <step performance="required">
+    <para>
+     Change the <guimenu>Device Type</guimenu> to <guimenu>IDE
+     CDROM</guimenu>.
+    </para>
+   </step>
+   <step performance="required">
+    <para>
+     Select <guimenu>Select Managed or Other Existing Storage</guimenu>.
+    </para>
+    <substeps performance="required">
+     <step performance="required">
+      <para>
+       To assign the device to a physical medium, enter the path to the
+       &vmhost;'s CD/DVD-ROM device (for example,
+       <filename>/dev/cdrom</filename>) next to the
+       <guimenu>Browse</guimenu> button. Alternatively you may use the
+       <guimenu>Browse</guimenu> button to open a file browser and then
+       click <guimenu>Browse Local</guimenu> to select the device. Assigning
+       the device to a physical medium is only possible, when the &vmm; was
+       started on the &vmhost;.
+      </para>
+     </step>
+     <step performance="required">
+      <para>
+       To assign the device to an existing image, click
+       <guimenu>Browse</guimenu> to choose an image from a storage pool. If
+       the &vmm; was started on the &vmhost;, you may alternatively choose
+       an image from another location on the file system by clicking
+       <guimenu>Browse Local</guimenu>. Select an image and close the file
+       browser with <guimenu>Choose Volume</guimenu>.
+      </para>
+     </step>
+    </substeps>
+   </step>
+   <step performance="required">
+    <para>
+     Proceed with <guimenu>Forward</guimenu> to review the settings. Apply
+     them with <guimenu>Finish</guimenu>, <guimenu>Yes</guimenu>, and
+     <guimenu>Apply</guimenu>.
+    </para>
+   </step>
+   <step performance="required">
+    <para>
+     Reboot the &vmguest; to make the new device available. For further
+     information also see
+     <xref linkend="sec.libvirt.config.cdrom.media_change"/>.
+    </para>
+   </step>
+  </procedure>
+ </sect1>
+ <sect1 id="sec.libvirt.config.floppy">
+  <title>Adding a Floppy Device with &vmm;</title>
+
+  <para>
+   Currently &kvm; only supports the use of floppy disk images&mdash;using a
+   physical floppy drive is not supported. Create a floppy disk image from
+   an existing floppy using <command>dd</command>:
+  </para>
+
+  <screen>dd if=/dev/fd0 of=/var/lib/libvirt/images/floppy.img</screen>
+
+  <para>
+   To create an empty floppy disk image use one of the following commands:
+  </para>
+
+  <screen># raw image
+dd if=/dev/zero of=/var/lib/libvirt/images/floppy.img bs=512 count=2880
+
+# FAT formatted image
+mkfs.msdos -C /var/lib/libvirt/images/floppy.img 1440</screen>
+
+  <para>
+   To add a floppy device to your &vmguest; proceed as follows:
+  </para>
+
+  <procedure>
+   <step performance="required">
+    <para>
+     Double-click a &vmguest; entry in the &vmm; to open its console and
+     switch to the <guimenu>Details</guimenu> view with <menuchoice>
+     <guimenu>View</guimenu> <guimenu>Details</guimenu> </menuchoice>.
+    </para>
+   </step>
+   <step performance="required">
+    <para>
+     Click <guimenu>Add Hardware</guimenu> and choose
+     <guimenu>Storage</guimenu> in the pop-up window. Proceed with
+     <guimenu>Forward</guimenu>.
+    </para>
+   </step>
+   <step performance="required">
+    <para>
+     Change the <guimenu>Device Type</guimenu> to <guimenu>Floppy
+     Disk</guimenu>.
+    </para>
+   </step>
+   <step performance="required">
+    <para>
+     Choose <guimenu>Select Managed or Other Existing Storage</guimenu> and
+     click <guimenu>Browse</guimenu> to choose an existing image from a
+     storage pool. If &vmm; was started on the &vmhost;, you may
+     alternatively choose an image from another location on the file system
+     by clicking <guimenu>Browse Local</guimenu>. Select an image and close
+     the file browser with <guimenu>Choose Volume</guimenu>.
+    </para>
+   </step>
+   <step performance="required">
+    <para>
+     Proceed with <guimenu>Forward</guimenu> to review the settings. Apply
+     them with <guimenu>Finish</guimenu>, <guimenu>Yes</guimenu>, and
+     <guimenu>Apply</guimenu>.
+    </para>
+   </step>
+   <step performance="required">
+    <para>
+     Reboot the &vmguest; to make the new device available. For further
+     information also see
+     <xref linkend="sec.libvirt.config.cdrom.media_change"/>.
+    </para>
+   </step>
+  </procedure>
+ </sect1>
+ <sect1 id="sec.libvirt.config.cdrom.media_change">
+  <title>Ejecting and Changing Floppy or CD/DVD-ROM Media with &vmm;</title>
+
+  <para>
+   Regardless whether you are using the &vmhost;'s physical CD/DVD-ROM
+   device or an ISO/Floppy image: before you can change the media or image
+   of an existing device in the &vmguest;, you first need to
+   <literal>disconnect</literal> the media from the guest.
+  </para>
+
+  <procedure>
+   <step performance="required">
+    <para>
+     Double-click a &vmguest; entry in the &vmm; to open its console and
+     switch to the <guimenu>Details</guimenu> view with <menuchoice>
+     <guimenu>View</guimenu> <guimenu>Details</guimenu> </menuchoice>.
+    </para>
+   </step>
+   <step performance="required">
+    <para>
+     Choose the Floppy or CD/DVD-ROM device and <quote>eject</quote> the
+     media by clicking <guimenu>Disconnect</guimenu>.
+    </para>
+   </step>
+   <step performance="required">
+    <para>
+     To <quote>insert</quote> a new media, click <guimenu>Connect</guimenu>.
+    </para>
+    <substeps performance="required">
+     <step performance="required">
+      <para>
+       If using the &vmhost;'s physical CD/DVD-ROM device, first change the
+       media in the device (this may require to unmount it on the &vmhost;
+       before it can be ejected). Then choose <guimenu>CD-ROM or
+       DVD</guimenu> and select the device from the drop-down list.
+      </para>
+     </step>
+     <step performance="required">
+      <para>
+       If using an ISO image, choose <guimenu>ISO image Location</guimenu>
+       and select an image by clicking <guimenu>Browse</guimenu>. When
+       connecting from a remote host, you may only choose images from
+       existing storage pools.
+      </para>
+     </step>
+    </substeps>
+   </step>
+   <step performance="required">
+    <para>
+     Click <guimenu>OK</guimenu> to finish. The new media can now be
+     accessed in the &vmguest;.
+    </para>
+   </step>
+  </procedure>
+ </sect1>
+ <sect1 id="sec.kvm.managing.clock">
+  <title>Clock Settings</title>
+
+  <para>
+   Keeping the correct time in a &vmguest; is one of the more difficult
+   aspects of virtualization. Keeping the correct time is especially
+   important for network applications and is also a prerequisite to do a
+   live migration of a &vmguest;.
+  </para>
+
+  <tip>
+   <title>Time Keeping on the &vmhost;</title>
+   <para>
+    It is strongly recommended to ensure the &vmhost; keeps the correct time
+    as well, for example, by utilizing NTP (see
+    <xref linkend="cha.netz.xntp"/> for more information).
+   </para>
+  </tip>
+
+  <sect2 id="sec.kvm.managing.clock.kvm">
+   <title>Using <systemitem>kvm_clock</systemitem></title>
+   <para>
+    &kvm; provides a para-virtualized clock which is currently supported by
+    <phrase os="osuse">&opensuse;,</phrase> &sls; 10 SP3 and newer and RedHat
+    Enterprise Linux 5.4 and newer via the <systemitem>kvm_clock</systemitem>
+    driver. It is strongly recommended to use
+    <systemitem>kvm_clock</systemitem> when available.
+   </para>
+   <para>
+    Use the following command inside a &vmguest; running Linux to check
+    whether the driver <systemitem>kvm_clock</systemitem> has been loaded:
+   </para>
+   <screen>~ # dmesg | grep kvm-clock
+[    0.000000] kvm-clock: cpu 0, msr 0:7d3a81, boot clock
+[    0.000000] kvm-clock: cpu 0, msr 0:1206a81, primary cpu clock
+[    0.012000] kvm-clock: cpu 1, msr 0:1306a81, secondary cpu clock
+[    0.160082] Switching to clocksource kvm-clock</screen>
+   <para>
+    To check which clock source is currently used, run the following command
+    in the &vmguest;. It should output <literal>kvm-clock</literal>:
+   </para>
+   <screen>cat /sys/devices/system/clocksource/clocksource0/current_clocksource</screen>
+   <important>
+    <title><literal>kvm-clock</literal> and NTP</title>
+    <para>
+     When using <literal>kvm-clock</literal>, it is not recommended to use
+     NTP in the &vmguest;, as well. Using NTP on the &vmhost;, however, is
+     still recommended.
+    </para>
+   </important>
+  </sect2>
+
+  <sect2 id="sec.kvm.managing.clock.other">
+   <title>Other Time Keeping Methods</title>
+   <para>
+    The para-virtualized <literal>kvm-clock</literal> is currently not
+    available for &sls; 9 and Windows operating systems. For Windows, use
+    the <literal>Windows Time Service Tools</literal> for time
+    synchronization (see
+    <ulink url="http://technet.microsoft.com/en-us/library/cc773263%28WS.10%29.aspx"/>
+    for more information).
+   </para>
+   <para>
+    Correct time keeping in &sls; 9 SP4 can be achieved by using special
+    boot parameters:
+   </para>
+   <simplelist>
+    <member><emphasis>32-bit Kernel:</emphasis><literal>clock=pmtmr</literal>
+    </member>
+    <member><emphasis>64-bit Kernel:</emphasis><literal>ignore_lost_ticks</literal>
+    </member>
+   </simplelist>
+  </sect2>
+ </sect1>
+</chapter>
