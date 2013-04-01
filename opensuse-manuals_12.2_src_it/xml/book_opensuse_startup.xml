@@ -9,6 +9,10 @@
 Please see LICENSE.txt for this document's license.
 *********************************
 -->
+<!--
+Translators list (for Italian version):
+Fabio S.	fa0sck@gmail.com
+-->
 <?xml-stylesheet href="urn:x-suse:xslt:profiling:novdoc-profile.xsl"
  type="text/xml" 
  title="Profiling step"?>
