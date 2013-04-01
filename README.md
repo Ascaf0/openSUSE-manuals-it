@@ -26,20 +26,28 @@ en.xml --(xml2pot)--> pot --("msginit --locale en --input file.pot --output file
 ===With xml2po===
 
 xml2po -l it -k -o 1_click_install_i.it.po 1_click_install_i.en.xml
+
 lokalize 1_click_install_i.it.po
+
 xml2po -l it -k -o 1_click_install_i.xml -p 1_click_install_i.it.po 1_click_install_i.en.xml
 
 ==With xml2pot===
 
 xml2pot 1_click_install_i.en.xml > 1_click_install_i.pot
+
 msginit --locale it --no-wrap --input 1_click_install_i.pot --output 1_click_install_i.it.po
+
 lokalize 1_click_install_i.it.po
+
 po2xml 1_click_install_i.en.xml 1_click_install_i.it.po > 1_click_install_i.xml
 
 ===Direct editing of file.xml===
 
 This should be redundant...
+
 cp myfile.en.xml myfile.xml
+
 vi myfile.xml
+
 
 Have fun!
