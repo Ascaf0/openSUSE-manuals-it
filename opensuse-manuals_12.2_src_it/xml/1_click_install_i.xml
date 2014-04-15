@@ -9,10 +9,6 @@
 Please see LICENSE.txt for this document's license.
 *********************************
 -->
-<!--
-Translators list (for Italian version):
-Ludovico Salemi 	ludovico.salemi@gmail.com
--->
 <sect1 xml:base="1_click_install_i.xml" id="sec.y2.sw.1click">
  <title>1-Click Install</title>
 
@@ -39,32 +35,64 @@ Ludovico Salemi 	ludovico.salemi@gmail.com
    </para>
   </step>
   <step performance="required">
-   <para>Digitare il nome del pacchetto che desideri installare, per esempio l'editor OpenStreetmap <systemitem>josm</systemitem>.</para>
+   <para>
+    Enter the name of the package you want to install, for example the
+    OpenStreetMap editor <systemitem>josm</systemitem>.
+   </para>
   </step>
   <step performance="required">
-   <para>Per affinare ciò che vuoi, affina le <guimenu> Opzioni di Ricerca </guimenu>.</para>
+   <para>
+    To refine the search, adjust the <guimenu>Search Options</guimenu>
+    according to your wishes.
+   </para>
   </step>
   <step performance="required">
-   <para>Premi <guimenu>Cerca</guimenu>.</para>
+   <para>
+    Click <guimenu>Search</guimenu>.
+   </para>
   </step>
   <step performance="required">
-   <para>Dalla lista selezionare la voce desiderata cliccando il pulsante<guimenu>1-Click Install</guimenu>.</para>
+   <para>
+    From the results list select the preferred item by clicking its
+    <guimenu>1-Click Install</guimenu> button.
+   </para>
   </step>
   <step performance="required">
    <para>
     In the Web browser's download dialog, select to open the file with the
     <guimenu>&yast; Meta Package Handler</guimenu>.
    </para>
-   <para>La voce 1-click installer apre la finestra <guimenu>Repositories Software Addizionale</guimenu> che fornisce i pacchetti che potranno essere installati tramite <literal>1-Click Install</literal> che sono attivati per default. Procedere con l'installazione, mantenere la selezione del repository. Per default, rimarranno caricati questi repositories. Al termine dell'installazione sarà probabile ricevere aggiornamenti.</para>
+   <para>
+    The 1-click installer opens the <guimenu>Additional Software
+    Repositories</guimenu> dialog. It shows the repositories providing the
+    packages you want to install per <literal>1-Click Install</literal>.
+    They are activated per default. To proceed with the installation, keep
+    the repository selection. By default, you remain subscribed to these
+    repositories after the installation has finished and you will receive
+    updates from them in the future.
+   </para>
   </step>
   <step performance="required">
-   <para>Se si vogliono usare nuovi repositories, deselezionare <guimenu> Al termine dell'installazione mantenere la sottoscrizione a questi Repositories</guimenu>. Premere <guimenu>Avanti</guimenu> per proseguire. </para>
+   <para>
+    If you want to use the new repositories only once instead, uncheck
+    <guimenu>Remain Subscribed to These Repositories after
+    Installation</guimenu>. Click <guimenu>Next</guimenu> to proceed.
+   </para>
   </step>
   <step performance="required">
-   <para>Selezionare i pacchetti software che si vogliono installare. Normalmente non è richiesto  di cambiare la selezione di default. Premere <guimenu>Avanti</guimenu> per proseguire.</para>
+   <para>
+    Now select the software packages that should be installed. Normally
+    there is no need to change the default selection. Click
+    <guimenu>Next</guimenu> to proceed.
+   </para>
   </step>
   <step performance="required">
-   <para>La videata <guimenu>Proposta</guimenu> visualizza il riepilogo delle scelte effettuate. Premere <guimenu>Personalizza</guimenu> per riavviare la configurazione. Premere <guimenu>Avanti</guimenu> e <guimenu>Sì</guimenu> per procedere con l'installazione.</para>
+   <para>
+    The <guimenu>Proposal</guimenu> screen summarizes the choices you made.
+    Click <guimenu>Customize</guimenu> to restart the configuration steps
+    from above. Click <guimenu>Next</guimenu> and <guimenu>Yes</guimenu> to
+    proceed with the installation.
+   </para>
   </step>
   <step performance="required">
    <para>
@@ -79,7 +107,7 @@ Ludovico Salemi 	ludovico.salemi@gmail.com
  </procedure>
 
  <tip>
-  <title>Disabilita la funzione 1-Click Install</title>
+  <title>Disabling 1-Click Install Feature</title>
 
   <para>
    If you want to disable the 1-Click install feature, uninstall the
