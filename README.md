@@ -14,37 +14,45 @@ http://ftp.hosteurope.de/mirror/ftp.opensuse.org/discontinued/SL-10.1/inst-sourc
 more...
 
 How to contribute
-=================
+-----------------
 
 Just fork and pull request or drop a message.
 
 How to proceed
-==============
+--------------
 
 Just edit the xml file of your choice (actually docbook formatted) with your favorite editor OR convert that file to a translation catalog .pot file. Finally translate the .po file from en to it using some powerful translation tool like poedit, lokalize, virtaal, etc. Then revert to xml format.
 In brief --if you want to follow this second path-- having installed package xml2pot, the flow is the following:
 
- en.xml --(xml2pot)--> pot --("msginit --locale en --input file.pot --output file.po" or open with virtaal)--> it.po --(po2xml)--> .xml (with Italian-translated parts)
+````
+en.xml --(xml2pot)--> pot --("msginit --locale en --input file.pot --output file.po" or open with virtaal)--> it.po --(po2xml)--> .xml (with Italian-translated parts)
+````
 
 With xml2po
-===========
+-----------
 
- xml2po -l it -k -o 1_click_install_i.it.po 1_click_install_i.en.xml
- lokalize 1_click_install_i.it.po
- xml2po -l it -k -o 1_click_install_i.xml -p 1_click_install_i.it.po 1_click_install_i.en.xml
+````shell
+xml2po -l it -k -o 1_click_install_i.it.po 1_click_install_i.en.xml
+lokalize 1_click_install_i.it.po
+xml2po -l it -k -o 1_click_install_i.xml -p 1_click_install_i.it.po 1_click_install_i.en.xml
+````
 
 With xml2pot
-============
+------------
 
- xml2pot 1_click_install_i.en.xml > 1_click_install_i.pot
- msginit --locale it --no-wrap --input 1_click_install_i.pot --output 1_click_install_i.it.po
- lokalize 1_click_install_i.it.po
- po2xml 1_click_install_i.en.xml 1_click_install_i.it.po > 1_click_install_i.xml
+````shell
+xml2pot 1_click_install_i.en.xml > 1_click_install_i.pot
+msginit --locale it --no-wrap --input 1_click_install_i.pot --output 1_click_install_i.it.po
+lokalize 1_click_install_i.it.po
+po2xml 1_click_install_i.en.xml 1_click_install_i.it.po > 1_click_install_i.xml
+````
 
 Direct editing of file.xml
-==========================
+--------------------------
 
 This should be redundant...
- cp myfile.en.xml myfile.xml
- vi myfile.xml
 
+````shell
+cp myfile.en.xml myfile.xml
+vi myfile.xml
+````
