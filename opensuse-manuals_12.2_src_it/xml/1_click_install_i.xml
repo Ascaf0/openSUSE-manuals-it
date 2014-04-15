@@ -35,64 +35,32 @@ Please see LICENSE.txt for this document's license.
    </para>
   </step>
   <step performance="required">
-   <para>
-    Enter the name of the package you want to install, for example the
-    OpenStreetMap editor <systemitem>josm</systemitem>.
-   </para>
+   <para>Digitare il nome del pacchetto che desideri installare, per esempio l'editor OpenStreetmap <systemitem>josm</systemitem>.</para>
   </step>
   <step performance="required">
-   <para>
-    To refine the search, adjust the <guimenu>Search Options</guimenu>
-    according to your wishes.
-   </para>
+   <para>Per affinare ciò che vuoi, affina le <guimenu> Opzioni di Ricerca </guimenu>.</para>
   </step>
   <step performance="required">
-   <para>
-    Click <guimenu>Search</guimenu>.
-   </para>
+   <para>Premi <guimenu>Cerca</guimenu>.</para>
   </step>
   <step performance="required">
-   <para>
-    From the results list select the preferred item by clicking its
-    <guimenu>1-Click Install</guimenu> button.
-   </para>
+   <para>Dalla lista selezionare la voce desiderata cliccando il pulsante<guimenu>1-Click Install</guimenu>.</para>
   </step>
   <step performance="required">
    <para>
     In the Web browser's download dialog, select to open the file with the
     <guimenu>&yast; Meta Package Handler</guimenu>.
    </para>
-   <para>
-    The 1-click installer opens the <guimenu>Additional Software
-    Repositories</guimenu> dialog. It shows the repositories providing the
-    packages you want to install per <literal>1-Click Install</literal>.
-    They are activated per default. To proceed with the installation, keep
-    the repository selection. By default, you remain subscribed to these
-    repositories after the installation has finished and you will receive
-    updates from them in the future.
-   </para>
+   <para>La voce 1-click installer apre la finestra <guimenu>Repositories Software Addizionale</guimenu> che fornisce i pacchetti che potranno essere installati tramite <literal>1-Click Install</literal> che sono attivati per default. Procedere con l'installazione, mantenere la selezione del repository. Per default, rimarranno caricati questi repositories. Al termine dell'installazione sarà probabile ricevere aggiornamenti.</para>
   </step>
   <step performance="required">
-   <para>
-    If you want to use the new repositories only once instead, uncheck
-    <guimenu>Remain Subscribed to These Repositories after
-    Installation</guimenu>. Click <guimenu>Next</guimenu> to proceed.
-   </para>
+   <para>Se si vogliono usare nuovi repositories, deselezionare <guimenu> Al termine dell'installazione mantenere la sottoscrizione a questi Repositories</guimenu>. Premere <guimenu>Avanti</guimenu> per proseguire. </para>
   </step>
   <step performance="required">
-   <para>
-    Now select the software packages that should be installed. Normally
-    there is no need to change the default selection. Click
-    <guimenu>Next</guimenu> to proceed.
-   </para>
+   <para>Selezionare i pacchetti software che si vogliono installare. Normalmente non è richiesto  di cambiare la selezione di default. Premere <guimenu>Avanti</guimenu> per proseguire.</para>
   </step>
   <step performance="required">
-   <para>
-    The <guimenu>Proposal</guimenu> screen summarizes the choices you made.
-    Click <guimenu>Customize</guimenu> to restart the configuration steps
-    from above. Click <guimenu>Next</guimenu> and <guimenu>Yes</guimenu> to
-    proceed with the installation.
-   </para>
+   <para>La videata <guimenu>Proposta</guimenu> visualizza il riepilogo delle scelte effettuate. Premere <guimenu>Personalizza</guimenu> per riavviare la configurazione. Premere <guimenu>Avanti</guimenu> e <guimenu>Sì</guimenu> per procedere con l'installazione.</para>
   </step>
   <step performance="required">
    <para>
@@ -107,7 +75,7 @@ Please see LICENSE.txt for this document's license.
  </procedure>
 
  <tip>
-  <title>Disabling 1-Click Install Feature</title>
+  <title>Disabilita la funzione 1-Click Install</title>
 
   <para>
    If you want to disable the 1-Click install feature, uninstall the
